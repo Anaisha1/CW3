@@ -1,4 +1,17 @@
 <?php
+$required = ['name', 'section', 'cardnumber', 'cardtype'];
+
+foreach ($required as $field) {
+    if (!isset($_POST[$field]) || trim($_POST[$field]) === '') {
+        echo "<h1>Sorry</h1>";
+        echo "<p>You did not fill out the form completely. ";
+        echo "<a href='buyagrade.html'>Try again?</a></p>";
+        exit;
+    }
+}
+?>
+
+<?php
 // Exercise 5: Basic Validation
 $required = ['name', 'section', 'cardnumber', 'cardtype'];
 
