@@ -1,23 +1,58 @@
-<form action="sucker.php" method="post">
-  <dl>
-    <dt>Name</dt>
-    <dd><input type="text" name="name"></dd>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy a Grade</title>
+</head>
+<body>
 
-    <dt>Section</dt>
-    <dd>
-      <select name="section">
-        <option value="">(Select a section)</option>
-        <option>MA</option><option>MB</option><option>MC</option><option>MD</option>
-        <option>ME</option><option>MF</option><option>MG</option><option>MH</option>
-      </select>
-    </dd>
+  <h1>Buy a Grade Form</h1>
 
-    <dt>Credit Card</dt>
-    <dd>
-      <input type="text" name="cardnumber"><br>
-      <label><input type="radio" name="cardtype" value="visa">Visa</label>
-      <label><input type="radio" name="cardtype" value="mastercard">MasterCard</label>
-    </dd>
-  </dl>
-  <div><input type="submit" value="I am a giant sucker."></div>
-</form>
+  <form action="sucker.php" method="post">
+    <dl>
+
+      <dt>Name</dt>
+      <dd>
+        <input type="text" name="name" required>
+      </dd>
+
+      <dt>Section</dt>
+      <dd>
+        <select name="section" required>
+          <option value="">(Select a section)</option>
+          <option value="MA">MA</option>
+          <option value="MB">MB</option>
+          <option value="MC">MC</option>
+          <option value="MD">MD</option>
+          <option value="ME">ME</option>
+          <option value="MF">MF</option>
+          <option value="MG">MG</option>
+          <option value="MH">MH</option>
+        </select>
+      </dd>
+
+      <dt>Credit Card</dt>
+      <dd>
+        <input type="text" name="cardnumber" placeholder="Enter card number" required>
+        <br><br>
+
+        <label>
+          <input type="radio" name="cardtype" value="visa" required>
+          Visa
+        </label>
+
+        <label>
+          <input type="radio" name="cardtype" value="mastercard">
+          MasterCard
+        </label>
+      </dd>
+
+    </dl>
+
+    <div>
+      <input type="submit" value="I am a giant sucker.">
+    </div>
+  </form>
+
+</body>
+</html>
